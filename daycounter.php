@@ -2,7 +2,7 @@
 // 0.2 vlsv 18.11.2018
 
 // Использование:
-// require_once(__DIR__ . 'libraries/classes/daycounter.php');
+// require_once(__DIR__ . '/daycounter.php');
 // $dayCounter = new DayCounter;
 // $str = $dayCounter->counter($var['d'],$var['m'],$var['y']);
 
