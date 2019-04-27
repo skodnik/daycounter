@@ -1,6 +1,11 @@
 <?php
 // 0.2 vlsv 18.11.2018
 
+// Использование:
+// require_once(__DIR__ . 'libraries/classes/daycounter.php');
+// $dayCounter = new DayCounter;
+// $str = $dayCounter->counter($var['d'],$var['m'],$var['y']);
+
 class DayCounter 
 {
   public function counter($d, $m, $y)
@@ -40,9 +45,9 @@ class DayCounter
     }
     
     $month = $month - 1;
-    $year = intval($month / 12); // Количество лет
+    $year =(int)($month / 12); // Количество лет
     $month = $month % 12; // Количество месяцев
-    $day = abs(intval(($nowDate - $rtime) / 86400))+$corr; // Количество дней
+    $day = abs((int)(($nowDate - $rtime) / 86400))+$corr; // Количество дней
     
     if ($year) {
       $andM = $andD = 'и ';
