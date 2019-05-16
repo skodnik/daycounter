@@ -1,14 +1,21 @@
 <?php
-// 0.2 vlsv 18.11.2018
-
-// Использование:
-// require_once(__DIR__ . '/daycounter.php');
-// $dayCounter = new DayCounter;
-// $str = $dayCounter->counter($var['d'],$var['m'],$var['y']);
-
+/**
+ * Class DayCounter
+ * @version 0.2.1
+ * @license MIT
+ * @copyright vlsv 18.11.2018
+ * @author Evgeny Vlasov mail@vlsv.me
+ */
 class DayCounter
 {
-    public function counter($d, $m, $y)
+    /**
+     * @static
+     * @param $d - day [dd]
+     * @param $m - month [mm]
+     * @param $y - year [yyyy]
+     * @return string
+     */
+    public static function counter($d, $m, $y)
     {
         if ($d > 31 or $d < 1 or $m > 12 or $m < 1 or $y > 9999 or $y < 200) {
             return 'Ошибка в дате! 
